@@ -1,4 +1,4 @@
-const import { compose, graphql,GraphQLString ,GraphQLInt} from 'react-apollo'
+const import { schema, graphql,GraphQLString ,GraphQLInt} from 'react-apollo'
 const graphql = require('graphql');
 const  GraphQlObjectType = graphql;
 
@@ -26,6 +26,6 @@ const RootQuery = new GraphQlObjectType ({
     }
 });
 
-new GraphQLSchema({
+module.export=new GraphQLSchema({
     query: RootQuery
 })
