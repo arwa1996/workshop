@@ -19,9 +19,13 @@ const RootQuery = new GraphQlObjectType ({
         user:{type: UserType,
         args: {id:{type: GraphQLString}},
         resolved:(parentValue,args) {
-return _.find(users,{id:args.id})
+        return _.find(users,{id:args.id})
     }
     },
        
     }
+});
+
+new GraphQLSchema({
+    query: RootQuery
 })

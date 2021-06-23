@@ -3,6 +3,7 @@ import expressGraphQL from "express-graphql";
 const app = express();
 app.use(
   "/graphql",
+  schema,
   expressGraphQL({
     graphiql: true,
   })
