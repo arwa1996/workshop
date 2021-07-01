@@ -7,10 +7,16 @@ import { Action } from "../actions";
 interface RepositoriesState {
   loading: boolean;
   error: string | undefined;
-  dtat: string[];
+  data: string[];
 }
 
-const reducer = (state: RepositoriesState, action: Action) => {
+const initialState = {
+  loading: false,
+  error: "",
+  data: [],
+};
+
+const reducer = (state: RepositoriesState = initialState, action: Action) => {
   switch (action.type) {
     // this case is for a new request(as soon as the user clicks on the search button), so it's time to flip the loading flag to true
     case ActionType.SEARCH_REPOSITORIES:

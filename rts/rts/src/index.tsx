@@ -1,11 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import RepositoriesList from "./components/RepositoriesList";
+
+import { store } from "./state";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hi there !</h1>
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>Search for a Package</h1>
+        <RepositoriesList />
+      </div>
+    </Provider>
   );
 };
 
